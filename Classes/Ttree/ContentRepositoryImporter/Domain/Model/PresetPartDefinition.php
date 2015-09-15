@@ -99,7 +99,7 @@ class PresetPartDefinition  {
 		$this->dataProviderOptions = isset($setting['dataProviderOptions']) ? $setting['dataProviderOptions'] : [];
 		$this->currentBatch = 1;
 		$this->currentImportIdentifier = $currentImportIdentifier;
-		$this->debug = isset($setting['debug']) ? (boolean)$setting['label'] : FALSE;
+		$this->debug = isset($setting['debug']) ? (boolean)$setting['debug'] : FALSE;
 		if ($this->debug === TRUE) {
 			$this->batchSize = 1;
 		}
