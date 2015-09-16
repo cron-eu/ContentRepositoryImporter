@@ -20,10 +20,7 @@ A basic DataProvider
 --------------------
 
 Every dataprovider must extends the ``DataProvider`` abstract class or implements the 
-interface ```DtaProviderInterface```. Check the source code of the abstract data provider, there's some useful things.
-
-It's important to update the ```cont``` property when you process data from the external source. During the processing,
-you can decide to skip some data (invalid data, missing value, ...) so we can not use the SQL count feature.
+interface ```DataProviderInterface```. Check the source code of the abstract data provider, there's some useful things.
 
 ```php
 class BasicDataProvider extends DataProvider {
@@ -45,8 +42,6 @@ class BasicDataProvider extends DataProvider {
 				'name' => String::create($reportType['name'])->getValue()
 			];
 		}
-
-		$this->count = count($result);
 
 		return $result;
 	}
